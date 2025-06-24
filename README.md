@@ -78,24 +78,12 @@ We evaluate our model against existing map estimation approaches based on modali
 
 Qualitative outcomes of our model (BEVSeg2GTA): The six camera perspectives of nuScenes surrounding the vehicle are shown, with the top three facing forward and the bottom three facing backward. Ground truth segmentation is displayed on the right. Our trajectory prediction approach integrates improved map-view segmentation with ego vehicle trajectory (second from the right), and it is compared to the LSS method  and the CVT method  (third and fourth from the right)
 
-<img src="https://github.com/user-attachments/assets/39775418-9558-4fd0-80e5-c322c9e92c74" width ="650">
+<img src="https://github.com/user-attachments/assets/a9493660-addf-4fab-bb46-7867ec95c581" width ="650">
 
 
 
-## 📄 Citation
 
-If you find this work useful, please cite:
 
-```bibtex
-@ARTICLE{10679361,
-  author={Sharma, Sushil and Das, Arindam and Sistu, Ganesh and Halton, Mark and Eising, Ciarán},
-  journal={IEEE Access}, 
-  title={BEVSeg2GTA: Joint Vehicle Segmentation and Graph Neural Networks for Ego Vehicle Trajectory Prediction in Bird’s-Eye-View}, 
-  year={2024},
-  volume={12},
-  pages={132159--132174},
-  doi={10.1109/ACCESS.2024.3459595}
-}
 
 
 
