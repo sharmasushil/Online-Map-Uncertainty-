@@ -1,9 +1,5 @@
 
 
-<p align="center">
-    <h4 align="center"><a href="https://ieeexplore.ieee.org/abstract/document/10679361">📑 IEEE Access</a>  | <a href="https://www.youtube.com/watch?v=zsNb2Po-sEA&ab_channel=SushilSharma">🎬 Video</a>    </h4> 
-</p>
-
 ## Revisiting Online Map Uncertainty for More Reliable Trajectory Prediction in Driving Perception
 
 Abstract: High-definition (HD) maps are essential for autonomous vehicle (AV) perception and planning but come with high labeling and maintenance costs. To address this, recent approaches estimate HD maps online from sensor data, allowing AVs to operate beyond pre-mapped regions. However, these methods are often developed in isolation from downstream tasks like trajectory prediction and lack uncertainty estimates, limiting their reliability. This paper revisits the impact of online map uncertainty on trajectory prediction and proposes a framework that integrates uncertainty-aware map representations into the prediction pipeline. By dynamically assessing map reliability and adapting predictions accordingly, our approach improves robustness in complex urban environments. Extensive experiments on benchmark datasets demonstrate that our method significantly outperforms state-of-the-art models, reducing prediction errors and enhancing AV decision-making. This work underscores the necessity of uncertainty-aware mapping for safer and more resilient autonomous systems.
