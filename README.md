@@ -62,7 +62,7 @@ We evaluate our model against existing map estimation approaches based on modali
 
 > 🔼 Higher values indicate better performance.
 
-| **Model**    | **Modality** | **Backbone** | **Epoch** | **APₚᵣₑd.** | **AP\_dᵢᵥ.** | **AP\_bₒᵤₙd.** | **mAP**   |
+| **Model**    | **Modality** | **Backbone** | **Epoch** | **AP\_Pred.** | **AP\_dᵢᵥ.** | **AP\_bₒᵤₙd.** | **mAP**   |
 | ------------ | ------------ | ------------ | --------- | ----------- | ------------ | -------------- | --------- |
 | HDMapNet     | Camera       | Efficient-B0 | 30        | 14.4        | 21.7         | 33.0           | 23.0      |
 | VectorMapNet | Camera       | ResNet-50    | 60        | 42.5        | 51.4         | 44.1           | 46.0      |
@@ -73,7 +73,6 @@ We evaluate our model against existing map estimation approaches based on modali
 
 ---
 
-Let me know if you also want this wrapped as a complete `README.md` with project title, installation, or usage sections.
 
 
 
