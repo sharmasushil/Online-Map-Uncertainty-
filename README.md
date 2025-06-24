@@ -6,24 +6,19 @@
 
 ## Revisiting Online Map Uncertainty for More Reliable Trajectory Prediction in Driving Perception
 
-High-definition (HD) maps are essential for autonomous vehicle (AV) perception and planning but come with high labeling and maintenance costs. To address this, recent approaches estimate HD maps online from sensor data, allowing AVs to operate beyond pre-mapped regions. However, these methods are often developed in isolation from downstream tasks like trajectory prediction and lack uncertainty estimates, limiting their reliability. This paper revisits the impact of online map uncertainty on trajectory prediction and proposes a framework that integrates uncertainty-aware map representations into the prediction pipeline. By dynamically assessing map reliability and adapting predictions accordingly, our approach improves robustness in complex urban environments. Extensive experiments on benchmark datasets demonstrate that our method significantly outperforms state-of-the-art models, reducing prediction errors and enhancing AV decision-making. This work underscores the necessity of uncertainty-aware mapping for safer and more resilient autonomous systems.
+Abstract: High-definition (HD) maps are essential for autonomous vehicle (AV) perception and planning but come with high labeling and maintenance costs. To address this, recent approaches estimate HD maps online from sensor data, allowing AVs to operate beyond pre-mapped regions. However, these methods are often developed in isolation from downstream tasks like trajectory prediction and lack uncertainty estimates, limiting their reliability. This paper revisits the impact of online map uncertainty on trajectory prediction and proposes a framework that integrates uncertainty-aware map representations into the prediction pipeline. By dynamically assessing map reliability and adapting predictions accordingly, our approach improves robustness in complex urban environments. Extensive experiments on benchmark datasets demonstrate that our method significantly outperforms state-of-the-art models, reducing prediction errors and enhancing AV decision-making. This work underscores the necessity of uncertainty-aware mapping for safer and more resilient autonomous systems.
 
-
-
-## Our Overview 📑
-The BEVSeg2GTA framework aims to enhance ego vehicle trajectory prediction by integrating an encoder-decoder transformer and a GNN. The framework begins with a projection module, which transforms the input multi-camera views and map information into a BEV perspective using an encoder-decoder transformer. The segmentation output from this module is then fed into the GNN, which is utilized to construct a graph representing spatial information. This graph is subsequently employed as input into an STPN, which produces predictions of the ego vehicle's trajectory.
-
-<img src="https://github.com/user-attachments/assets/ba98c000-debc-44a3-bc9b-2865923b900c" width ="850">
 
 
 
 ## Our Contribution  ⚙️
 
 
--  Our  proposal architecture (\textbf{BEVSeg2GTA}) offers an approach to accomplish vehicle segmentation and ego vehicle trajectory prediction tasks jointly, thereby achieving state-of-the-art results in both segmentation and trajectory prediction compared on the nuScenes dataset.
--  Our proposal integrates GNNs into the BEV architecture to capture the spatial relationships of the host vehicle and nearby objects, where the weights of the connections are inverses of the distances.
--  STPN is then integrated for trajectory estimation, so our network proposal considers both spatial and temporal aspects of the problem.
-
+- Revisiting the method proposed in \cite{gu2024producing} to explore its applicability to end-to-end motion forecasting (MF). Specifically, we analyze the method's core principles and extend its capabilities to accommodate the direct prediction of future agent trajectories within an end-to-end framework.
+    
+- Enhancing existing online map estimation techniques to generate uncertainty-aware map representations tailored for end-to-end motion forecasting. This involves developing methods to quantify and propagate uncertainty in online map features, thereby improving the robustness and reliability of map-based contextual cues for trajectory prediction tasks.
+    
+- Demonstrating the integration of these uncertainty-aware online mapping approaches within an end-to-end motion forecasting pipeline. By leveraging this integration, we highlight how our approach enables tighter coupling between online mapping and trajectory prediction, leading to improved performance and generalization in dynamic and partially observed environments.
 
     
 
