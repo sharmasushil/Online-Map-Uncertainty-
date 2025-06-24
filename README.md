@@ -76,8 +76,7 @@ We evaluate our model against existing map estimation approaches based on modali
 
 ## Qualitative results 📈
 
-Qualitative outcomes of our model (BEVSeg2GTA): The six camera perspectives of nuScenes surrounding the vehicle are shown, with the top three facing forward and the bottom three facing backward. Ground truth segmentation is displayed on the right. Our trajectory prediction approach integrates improved map-view segmentation with ego vehicle trajectory (second from the right), and it is compared to the LSS method  and the CVT method  (third and fourth from the right)
-
+Multi-view camera images from nuScenes (left), with corresponding ground truth (first column, right), trajectory prediction (second column), and improved map uncertainty with trajectory prediction (third column).
 <img src="https://github.com/user-attachments/assets/a9493660-addf-4fab-bb46-7867ec95c581" width ="650">
 
 
