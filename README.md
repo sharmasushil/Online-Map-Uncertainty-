@@ -55,14 +55,14 @@ We compare our proposed model (MMTraP) with the baseline and ground truth using 
 
 We evaluate our model against existing map estimation approaches based on modality, backbone architecture, training epochs, and various AP metrics:
 
-* **APₚᵣₑd.**: Prediction accuracy
-* **AP\_dᵢᵥ.**: Divider accuracy
-* **AP\_bₒᵤₙd.**: Boundary accuracy
+* **AP\_Pred.**: Prediction accuracy
+* **AP\_Div.**: Divider accuracy
+* **AP\_Bound.**: Boundary accuracy
 * **mAP**: Mean Average Precision
 
 > 🔼 Higher values indicate better performance.
 
-| **Model**    | **Modality** | **Backbone** | **Epoch** | **AP\_Pred.** | **AP\_dᵢᵥ.** | **AP\_bₒᵤₙd.** | **mAP**   |
+| **Model**    | **Modality** | **Backbone** | **Epoch** | **AP\_Pred.** | **AP\_Div.** | **AP\_Bound.** | **mAP**   |
 | ------------ | ------------ | ------------ | --------- | ----------- | ------------ | -------------- | --------- |
 | HDMapNet     | Camera       | Efficient-B0 | 30        | 14.4        | 21.7         | 33.0           | 23.0      |
 | VectorMapNet | Camera       | ResNet-50    | 60        | 42.5        | 51.4         | 44.1           | 46.0      |
