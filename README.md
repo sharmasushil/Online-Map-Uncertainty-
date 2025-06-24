@@ -29,47 +29,55 @@ Our approach to online HD map estimation: multi-camera images are transformed to
 
 
 
-    
+Here's a complete GitHub-flavored `README.md` section including the two tables you requested, written in Markdown format and styled appropriately for direct inclusion in a GitHub repository:
 
-## kNN Algorthim Analsis ⛓️
-Exploring how changes in the parameter k, representing the number of nearest neighbors analyzed in the kNN algorithm, impact the connectivity and layout of nodes and edges in a graph. In the visualization, the red box indicates the ego vehicle, the blue boxes represent other agents in the scene, and the red dots denote the nodes.
+---
 
-<img src="https://github.com/user-attachments/assets/68ea478f-88bb-40e7-b3c6-97ec33042d47" width ="850">
+## 🚗 Trajectory Prediction – Performance Comparison
+
+We compare our proposed model (MMTraP) with the baseline and ground truth using the following metrics:
+
+* **minADE**: Minimum Average Displacement Error
+* **minFDE**: Minimum Final Displacement Error
+* **MR**: Miss Rate
+
+> 🔽 Lower values indicate better performance.
+
+| **Model**    | **minADE ↓** | **minFDE ↓** | **MR ↓**     |
+| ------------ | ------------ | ------------ | ------------ |
+| **GT Map**   | 0.8809       | 1.489        | 0.1903       |
+| **Baseline** | 2.21         | 5.16         | 0.93         |
+| **Ours**     | 1.92 (--13%) | 4.21 (--18%) | 0.64 (--31%) |
+
+---
+
+## 🗺️ Map Estimation – Model Comparison
+
+We evaluate our model against existing map estimation approaches based on modality, backbone architecture, training epochs, and various AP metrics:
+
+* **APₚᵣₑd.**: Prediction accuracy
+* **AP\_dᵢᵥ.**: Divider accuracy
+* **AP\_bₒᵤₙd.**: Boundary accuracy
+* **mAP**: Mean Average Precision
+
+> 🔼 Higher values indicate better performance.
+
+| **Model**    | **Modality** | **Backbone** | **Epoch** | **APₚᵣₑd.** | **AP\_dᵢᵥ.** | **AP\_bₒᵤₙd.** | **mAP**   |
+| ------------ | ------------ | ------------ | --------- | ----------- | ------------ | -------------- | --------- |
+| HDMapNet     | Camera       | Efficient-B0 | 30        | 14.4        | 21.7         | 33.0           | 23.0      |
+| VectorMapNet | Camera       | ResNet-50    | 60        | 42.5        | 51.4         | 44.1           | 46.0      |
+| MapVR        | Camera       | ResNet-50    | 24        | 55.0        | 61.8         | 59.4           | 58.73     |
+| PivotNet     | Camera       | ResNet-50    | 30        | 53.8        | 55.8         | 59.6           | 56.4      |
+| MapTR        | Camera       | ResNet-50    | 24        | 68.1        | 69.7         | 69.7           | 68.83     |
+| **Ours**     | Camera       | ResNet-50    | 24        | **71.4**    | **73.7**     | **75.0**       | **73.36** |
+
+---
+
+Let me know if you also want this wrapped as a complete `README.md` with project title, installation, or usage sections.
 
 
 
 
-## 📊 Vehicle Segmentation Results on nuScenes Dataset
-We compare the performance of different methods for vehicle segmentation on the nuScenes dataset, including our proposed approach. The results are evaluated using Intersection over Union (IoU) for the BEV segmentation task.
-
-| **Method**        | **Surround-View Camera** | **Input Image Size (px)** | **Feature Extractor** | **Grid Scale / Unit Size** | **FPS** | **Vehicle IoU (%) ↑** |
-|-------------------|---------------------------|----------------------------|------------------------|-----------------------------|--------|-----------------------|
-| PanSeg         | ✗                         | 448 × 768                  | EfficientDet           | -                           | -      | 35.06                |
-| GitNet         | ✗                         | -                          | ResNet50               | 200×200 / 0.25m             | -      | 35.90                |
-| M2BEV          | ✓                         | 900 × 1600                 | ResNeXt-101            | 200×200 / 0.5m              | -      | -                    |
-| LSS            | ✓                         | 128 × 352                  | EfficientNet-B0        | 200×200 / 0.5m              | 25     | 32.1                 |
-| CVT            | ✓                         | 200 × 200                  | EfficientNet-B4        | 200×200 / 0.5m              | 35     | 36.0                 |
-| CoBEVT         | ✓                         | 200 × 200                  | EfficientNet-B4        | 200×200 / 0.5m              | 35     | 37.1                 |
-| **Ours**       | ✓                         | 200 × 200                  | EfficientNet-B4        | 200×200 / 0.5m              | 35     | **37.9**             |
-
-
-
-## 🚗 Trajectory Prediction Results on nuScenes Dataset
-Evaluation of competing methods on the nuScenes dataset, analyzing Minimum Average Displacement Error (MinADE) and Final Displacement Error (MinFDE) over a 6-second prediction horizon.
-
-| **Method**               | **MinADE₅ ↓** | **MinADE₁₀ ↓** | **MinADE₁₅ ↓** | **MinFDE₅ ↓** | **MinFDE₁₀ ↓** | **MinFDE₁₅ ↓** | **MissRate₍₅,₂₎ ↓** | **MissRate₍₁₀,₂₎ ↓** |
-|--------------------------|---------------|----------------|----------------|---------------|----------------|----------------|----------------------|-----------------------|
-| Constant Velocity & Yaw | 4.61          | 4.61           | 4.61           | 11.21         | 11.21          | 11.21          | 0.91                 | 0.91                  |
-| Physics Oracle           | 3.69          | 3.69           | 3.69           | 9.06          | 9.06           | 9.06           | 0.88                 | 0.88                  |
-| CoverNet             | 2.62          | 1.92           | 1.63           | 11.36         | -              | -              | 0.76                 | 0.64                  |
-| Trajectron++         | 1.88          | 1.51           | -              | -             | -              | -              | 0.70                 | 0.64                  |
-| MTP                  | 2.22          | 1.74           | 1.55           | 4.83          | 3.54           | 3.05           | 0.74                 | 0.67                  |
-| MultiPath          | *1.78*        | 1.55           | 1.52           | **3.62**      | 2.93           | 2.89           | 0.78                 | 0.76                  |
-| MHA-JAM             | 1.85          | *1.24*         | **1.03**       | 3.72          | *2.23*         | *1.67*         | *0.60*               | **0.46**              |
-| **Ours**                 | **1.63**      | **1.19**       | *1.06*         | *3.63*        | **2.13**       | **1.65**       | **0.56**             | *0.51*                |
-
-Bold = Best result, Italics = Second best
-Missing values are marked with -
 
 ## Qualitative results 📈
 
